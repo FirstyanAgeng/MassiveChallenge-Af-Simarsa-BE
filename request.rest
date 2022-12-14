@@ -1,0 +1,14 @@
+GET http://localhost:5100/users
+Authorization: Bearer 
+
+###
+POST  http://localhost:5100/users
+Content-Type: application/json
+
+{
+    "name" : "Jupri",
+    "email" : "jupri@gmail.com",
+    "idAdmin" : "222991",
+    "password" : "jupri123",
+    "confPassword" : "jupri123"
+}
