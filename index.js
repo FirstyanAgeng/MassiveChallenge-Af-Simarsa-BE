@@ -3,23 +3,24 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 // import Users from "./models/UserModel.js";
-// import Pasien from "./models/PasienModel.js";
-// import db from "./config/Database.js";
+import Pasien from "./models/PasienModel.js";
+import Contacts from "./models/ContactsModel.js";
+import db from "./config/Database.js";
 import router from "./routes/index.js";
-// import PasienRouter from "./routes/PasienRoute.js"
 
 dotenv.config();
 const app = express();
 
 try {
-//     await db.authenticate();
-//         (async()=>{
-//     await Pasien.sync();
-// })();
+    await db.authenticate();
+        (async()=>{
+    await Contacts.sync();
+})();
     console.log('Database Connected...');
 } catch (error) {
     console.error(error);
 }
+
 
 app.use(cors({ credentials:true, origin:'http://localhost:3000' }));
 app.use(cookieParser());

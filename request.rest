@@ -22,12 +22,13 @@ Content-Type: application/json
 
 {
     "nik" : "123456",
-    "name" : "Angel",
+    "name" : "Zulkarnaen",
     "telp" : "000000",
     "jenis_kelamin" : "perempuan",
     "poli" : "Dalam",
     "dokter" : "dr.ucup, S.Kd",
     "jadwal" : "17 Desember 2022",
+    "jam" : "19.00",
     "keluhan" : "Sakit dalam ringan"
 }
 
@@ -48,3 +49,17 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5100/pasien/2
+
+###
+GET http://localhost:5100/saran
+
+###
+POST  http://localhost:5100/saran
+Content-Type: application/json
+
+{
+    "name" : "Alif",
+    "email" : "Alif@gmail.com",
+    "subjek" : "Pendaftaran Error",
+    "pesan" : "Tolong diperbaiki ya",
+}

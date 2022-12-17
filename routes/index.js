@@ -6,6 +6,7 @@ import { getPasien,
     updatePasien, 
     deletePasien 
 } from "../controllers/Pasien.js";
+import { getContacts, createContacts } from "../controllers/Contacts.js";
 
 import { verifyToken } from "../middleware/VerifyToken.js";
 import { refreshToken } from "../controllers/RefreshToken.js";
@@ -24,4 +25,11 @@ router.get('/pasien/:id', getPasienById);
 router.post('/pasien', createPasien);
 router.patch('/pasien/:id', updatePasien);
 router.delete('/pasien/:id', deletePasien);
+
+// hubungi kami
+router.get('/saran', getContacts);
+router.post('/saran', createContacts);
+
+
+
 export default router;

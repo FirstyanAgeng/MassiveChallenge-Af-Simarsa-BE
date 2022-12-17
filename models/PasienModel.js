@@ -28,6 +28,10 @@ const Pasien = db.define('pasien',{
     jadwal:{
         type: DataTypes.STRING
     },
+    jam:{
+        type: DataTypes.STRING,
+        allowNull: true
+    },
     keluhan:{
         type: DataTypes.STRING
     }
