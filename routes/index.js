@@ -1,5 +1,12 @@
 import express from "express";
 import { getUsers, Register, Login, Logout } from "../controllers/Users.js";
+import { getPasien,
+    getPasienById, 
+    createPasien, 
+    updatePasien, 
+    deletePasien 
+} from "../controllers/Pasien.js";
+
 import { verifyToken } from "../middleware/VerifyToken.js";
 import { refreshToken } from "../controllers/RefreshToken.js";
 
@@ -11,4 +18,10 @@ router.post('/login', Login);
 router.get('/token', refreshToken);
 router.delete('/logout', Logout);
 
+// daftar pasien
+router.get('/pasien', getPasien);
+router.get('/pasien/:id', getPasienById);
+router.post('/pasien', createPasien);
+router.patch('/pasien/:id', updatePasien);
+router.delete('/pasien/:id', deletePasien);
 export default router;

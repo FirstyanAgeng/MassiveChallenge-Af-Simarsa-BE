@@ -12,3 +12,39 @@ Content-Type: application/json
     "password" : "jupri123",
     "confPassword" : "jupri123"
 }
+
+###
+GET http://localhost:5100/pasien
+
+###
+POST  http://localhost:5100/pasien
+Content-Type: application/json
+
+{
+    "nik" : "123456",
+    "name" : "Angel",
+    "telp" : "000000",
+    "jenis_kelamin" : "perempuan",
+    "poli" : "Dalam",
+    "dokter" : "dr.ucup, S.Kd",
+    "jadwal" : "17 Desember 2022",
+    "keluhan" : "Sakit dalam ringan"
+}
+
+###
+PATCH http://localhost:5100/pasien/2
+Content-Type: application/json
+
+{
+    "nik" : "123456",
+    "name" : "Putri",
+    "telp" : "000000",
+    "jenis_kelamin" : "perempuan",
+    "poli" : "Dalam",
+    "dokter" : "dr.ucup, S.Kd",
+    "jadwal" : "17 Desember 2022",
+    "keluhan" : "Sakit dalam ringan"
+}
+
+###
+DELETE http://localhost:5100/pasien/2
