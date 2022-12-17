@@ -5,10 +5,12 @@ const { DataTypes } = Sequelize;
 
 const Pasien = db.define('pasien',{
     nik:{
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        unique: true
     },
-    name:{
-        type: DataTypes.STRING
+    nrk:{
+        type: DataTypes.INTEGER,
+        unique: true
     },
     name:{
         type: DataTypes.STRING

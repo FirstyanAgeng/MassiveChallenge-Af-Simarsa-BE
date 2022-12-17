@@ -21,8 +21,9 @@ POST  http://localhost:5100/pasien
 Content-Type: application/json
 
 {
-    "nik" : "123456",
-    "name" : "Zulkarnaen",
+    "nik" : "123458",
+    "nrk" : "123458",
+    "name" : "bebel",
     "telp" : "000000",
     "jenis_kelamin" : "perempuan",
     "poli" : "Dalam",
@@ -61,5 +62,5 @@ Content-Type: application/json
     "name" : "Alif",
     "email" : "Alif@gmail.com",
     "subjek" : "Pendaftaran Error",
-    "pesan" : "Tolong diperbaiki ya",
+    "pesan" : "Tolong diperbaiki ya"
 }

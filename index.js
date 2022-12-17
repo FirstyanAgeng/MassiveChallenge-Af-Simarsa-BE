@@ -14,7 +14,7 @@ const app = express();
 try {
     await db.authenticate();
         (async()=>{
-    await Contacts.sync();
+    await Pasien.sync();
 })();
     console.log('Database Connected...');
 } catch (error) {
