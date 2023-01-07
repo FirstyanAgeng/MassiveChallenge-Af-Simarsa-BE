@@ -2,8 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-// import Users from "./models/UserModel.js";
-import Pasien from "./models/PasienModel.js";
+import Users from "./models/UserModel.js";
+// import Pasien from "./models/PasienModel.js";
 import Contacts from "./models/ContactsModel.js";
 import db from "./config/Database.js";
 import router from "./routes/index.js";
@@ -14,7 +14,7 @@ const app = express();
 try {
     await db.authenticate();
         (async()=>{
-    await Pasien.sync();
+    await Users.sync();
 })();
     console.log('Database Connected...');
 } catch (error) {

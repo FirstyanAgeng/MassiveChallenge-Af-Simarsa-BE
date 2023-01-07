@@ -6,11 +6,11 @@ POST  http://localhost:5100/users
 Content-Type: application/json
 
 {
-    "name" : "Jupri",
-    "email" : "jupri@gmail.com",
-    "idAdmin" : "222991",
-    "password" : "jupri123",
-    "confPassword" : "jupri123"
+    "name" : "Pantas",
+    "email" : "pantas@gmail.com",
+    "idAdmin" : "222992",
+    "password" : "pantas123",
+    "confPassword" : "pantas123"
 }
 
 ###
@@ -21,9 +21,9 @@ POST  http://localhost:5100/pasien
 Content-Type: application/json
 
 {
-    "nik" : "123458",
-    "nrk" : "123458",
-    "name" : "bebel",
+    "nik" : "1234512",
+    "nrk" : "1234582",
+    "name" : "dera",
     "telp" : "000000",
     "jenis_kelamin" : "perempuan",
     "poli" : "Dalam",

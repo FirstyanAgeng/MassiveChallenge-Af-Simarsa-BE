@@ -22,6 +22,6 @@ const Contacts = db.define('saran',{
 
 export default Contacts;
 
-// (async()=>{
-//     await db.sync();
-// })();
+(async()=>{
+    await db.sync();
+})();
