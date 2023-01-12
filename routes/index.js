@@ -7,6 +7,8 @@ import { getPasien,
     deletePasien 
 } from "../controllers/Pasien.js";
 import { getContacts, createContacts } from "../controllers/Contacts.js";
+import { getDokter, getDokterById, saveDokter, updateDokter, deleteDokter 
+} from "../controllers/DataDokter.js"
 
 import { verifyToken } from "../middleware/VerifyToken.js";
 import { refreshToken } from "../controllers/RefreshToken.js";
@@ -29,6 +31,13 @@ router.delete('/pasien/:id', deletePasien);
 // hubungi kami
 router.get('/saran', getContacts);
 router.post('/saran', createContacts);
+
+// data dokter
+router.get('/dokter', getDokter);
+router.get('/dokter/:id', getDokterById);
+router.post('/dokter', saveDokter);
+router.patch('/dokter/:id', updateDokter);
+router.delete('/dokter/:id', deleteDokter);
 
 
 

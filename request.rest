@@ -21,13 +21,13 @@ POST  http://localhost:5100/pasien
 Content-Type: application/json
 
 {
-    "nik" : "1234512",
-    "nrk" : "1234582",
-    "name" : "dera",
+    "nik" : "12345123",
+    "nrk" : "12345823",
+    "name" : "robert",
     "telp" : "000000",
-    "jenis_kelamin" : "perempuan",
+    "jenis_kelamin" : "laki-laki",
     "poli" : "Dalam",
-    "dokter" : "dr.ucup, S.Kd",
+    "dokter" : "dr.ujang, S.Kd",
     "jadwal" : "17 Desember 2022",
     "jam" : "19.00",
     "keluhan" : "Sakit dalam ringan"
@@ -59,8 +59,31 @@ POST  http://localhost:5100/saran
 Content-Type: application/json
 
 {
-    "name" : "Alif",
-    "email" : "Alif@gmail.com",
+    "name" : "ucup",
+    "email" : "ucup@gmail.com",
     "subjek" : "Pendaftaran Error",
     "pesan" : "Tolong diperbaiki ya"
 }
+
+# data dokter
+###
+GET http://localhost:5100/dokter
+
+###
+POST  http://localhost:5100/dokter
+Content-Type: application/json
+{
+    "name" : "Wira",
+    "spesialis" : "Poli Umum",
+    "telp" : "123",
+    "password" : "wira123",
+    "role" : "Dokter",
+    "no_izin_praktik" : "999",
+    "alamat" : "Setu",
+    "ttl" : "9 Januari 2000",
+    "agama" : "Islam",
+    "jadwaL_praktik" : "Besok"
+}
+
+###
+GET http://localhost:5100/dokter/8
