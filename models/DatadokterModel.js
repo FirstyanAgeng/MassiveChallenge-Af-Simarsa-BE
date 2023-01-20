@@ -1,9 +1,11 @@
-import {Sequelize} from "sequelize";
+import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 
-const {DataTypes} = Sequelize;
+const { DataTypes } = Sequelize;
 
-const DataDokter = db.define('Data Dokter',{
+const DataDokter = db.define(
+  "data-dokter",
+  {
     name: DataTypes.STRING,
     spesialis: DataTypes.STRING,
     telp: DataTypes.INTEGER,
@@ -14,9 +16,11 @@ const DataDokter = db.define('Data Dokter',{
     ttl: DataTypes.STRING,
     agama: DataTypes.STRING,
     jadwal_praktik: DataTypes.STRING,
-},{
-    freezeTableName:true
-});
+  },
+  {
+    freezeTableName: true,
+  }
+);
 
 export default DataDokter;
 
